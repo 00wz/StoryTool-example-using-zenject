@@ -10,6 +10,8 @@ public class StoryToolInstaller : MonoInstaller
     {
         foreach (var task in storyTool.StoryTasks)
         {
+            // Optionally, you can bind the task instances and/or their interfaces here
+
             Container.QueueForInject(task);
         }
     }

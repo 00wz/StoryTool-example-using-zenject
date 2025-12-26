@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
 
-public class ShowMessageStoryLine : StoryLine
+public class ShowMessage : StoryLine
 {
     [SerializeField]
     private string head;
