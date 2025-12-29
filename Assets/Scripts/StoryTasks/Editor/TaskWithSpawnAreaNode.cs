@@ -5,10 +5,10 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[StoryTaskNodeDrawer(typeof(CollectItems))]
-public class CollectItemsNode : StoryLineNode
+[StoryTaskNodeDrawer(typeof(CollectItems), typeof(KillAll))]
+public class TaskWithSpawnAreaNode : StoryLineNode
 {
-    public CollectItemsNode(SerializedProperty taskProperty) : base(taskProperty)
+    public TaskWithSpawnAreaNode(SerializedProperty taskProperty) : base(taskProperty)
     {
     }
 

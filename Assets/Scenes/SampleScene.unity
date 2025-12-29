@@ -396,6 +396,68 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!4 &172463633 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+  m_PrefabInstance: {fileID: 301003408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &301003408
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 492998123}
+    m_Modifications:
+    - target: {fileID: 1892551947078487524, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_Name
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.637
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.056
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182954508668627598, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6532bdf44c53e724b958026879d50d1e, type: 3}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +547,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.3961866, y: 0, z: 0, w: 0.91817003}
-  m_LocalPosition: {x: 0, y: 7.2753334, z: -6.8607235}
+  m_LocalPosition: {x: 0, y: 9.457933, z: -8.918941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -645,7 +707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 522680828}
-  distance: 10
+  distance: 13
 --- !u!1 &392492850
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +941,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 705371398}
+  - {fileID: 172463633}
   m_Father: {fileID: 522680828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &492998124
@@ -1047,6 +1110,9 @@ GameObject:
   - component: {fileID: 522680828}
   - component: {fileID: 522680830}
   - component: {fileID: 522680829}
+  - component: {fileID: 522680831}
+  - component: {fileID: 522680833}
+  - component: {fileID: 522680832}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1082,8 +1148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2750efde9ad064349b7fe6759d6d11ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 7
   rotationSpeed: 720
+  attackAreaCenter: {x: 0, y: 0.96, z: 1.24}
+  attackAreaRadius: 0.5
 --- !u!54 &522680830
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1111,6 +1179,50 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &522680831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522680827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791b0142315ae194cb739e45d3e471ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!111 &522680832
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522680827}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: da0663213ff396e4894f252d5b4eae09, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: da0663213ff396e4894f252d5b4eae09, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!114 &522680833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522680827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bccb5eedd2839a4f819320c5ea88310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  cooldown: 1
 --- !u!1 &705371397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1236,7 @@ GameObject:
   - component: {fileID: 705371400}
   - component: {fileID: 705371399}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: Forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1139,8 +1251,8 @@ Transform:
   m_GameObject: {fileID: 705371397}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0.5779}
-  m_LocalScale: {x: 0.51, y: 0.51, z: 1.665864}
+  m_LocalPosition: {x: 0, y: -0, z: 0.1916}
+  m_LocalScale: {x: 0.51, y: 0.51, z: 0.8932363}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 492998123}
@@ -1237,7 +1349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &720773601
 Transform:
   m_ObjectHideFlags: 0
@@ -1693,6 +1805,7 @@ MonoBehaviour:
     - rid: 3781012160386695231
     - rid: 3781012160386695233
     - rid: 3781012160386695235
+    - rid: 3781012160386695257
   references:
     version: 2
     RefIds:
@@ -1716,7 +1829,7 @@ MonoBehaviour:
             rid: 3781012160386695232
         end:
           _nextTriggerLink:
-            rid: 3781012160386695236
+            rid: -2
         itemPrefab: {fileID: 8891840016010643471, guid: 05c4b52a7c4b0614a924c732d6d94b82, type: 3}
         spawnAreaCenter: {x: 3.81, y: 0, z: 8.14}
         spawnAreaRadius: 5.17
@@ -1734,7 +1847,7 @@ MonoBehaviour:
             rid: 3781012160386695234
         end:
           _nextTriggerLink:
-            rid: 3781012160386695232
+            rid: 3781012160386695258
         questGiver: {fileID: 1731851192}
         questUniqueName: 1
         description: "\u0421\u0443\u043F \u0438\u0437 \u0437\u0430\u043B\u0443\u043F"
@@ -1744,7 +1857,7 @@ MonoBehaviour:
     - rid: 3781012160386695235
       type: {class: CompleteQuest, ns: , asm: Assembly-CSharp}
       data:
-        _editorNodePosition: {x: 1284, y: 242}
+        _editorNodePosition: {x: 1365, y: 242}
         _activityFlag_editor: 0
         start:
           _triggerlink:
@@ -1755,6 +1868,24 @@ MonoBehaviour:
         questGiver: {fileID: 1731851192}
         questUniqueName: 1
     - rid: 3781012160386695236
+      type: {class: TriggerLink, ns: StoryTool.Runtime, asm: StoryTool.Runtime}
+      data: 
+    - rid: 3781012160386695257
+      type: {class: KillAll, ns: , asm: Assembly-CSharp}
+      data:
+        _editorNodePosition: {x: 942, y: 460}
+        _activityFlag_editor: 0
+        start:
+          _triggerlink:
+            rid: 3781012160386695258
+        end:
+          _nextTriggerLink:
+            rid: 3781012160386695236
+        objectPrefab: {fileID: 7452374924706087605, guid: cfc06441123ea734f85ecb6eb036ef86, type: 3}
+        spawnAreaCenter: {x: 4.74, y: 0, z: 7.64}
+        spawnAreaRadius: 4.59
+        spawnCount: 2
+    - rid: 3781012160386695258
       type: {class: TriggerLink, ns: StoryTool.Runtime, asm: StoryTool.Runtime}
       data: 
 --- !u!4 &1375419496
