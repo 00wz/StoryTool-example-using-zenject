@@ -36,7 +36,8 @@ public class MessageView : MonoBehaviour
     private void CloseMessage()
     {
         gameObject.SetActive(false);
-        onCloseActions?.Invoke();
+        var tmpActions = onCloseActions;
         onCloseActions = null;
+        tmpActions?.Invoke();
     }
 }

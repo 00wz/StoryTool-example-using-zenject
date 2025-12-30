@@ -9,6 +9,7 @@ public class ShowMessage : StoryLine
     private string head;
 
     [SerializeField]
+    [TextArea(3, 5)]
     private string body;
     private UIService _uiService;
 
