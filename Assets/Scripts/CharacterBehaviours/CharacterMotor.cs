@@ -39,14 +39,16 @@ public class CharacterMotor : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         
-        var lookDirection = getClosestPoint() - transform.position;
-        lookDirection.y = 0;
-        while (target != null && Vector3.Angle(transform.forward, lookDirection) > 1f)
+        while (target != null)
         {
+            var lookDirection = getClosestPoint() - transform.position;
+            lookDirection.y = 0;
+            if (Vector3.Angle(transform.forward, lookDirection) < 1f) 
+            {
+                break;
+            }
             ApplyRotation(lookDirection);
             yield return new WaitForFixedUpdate();
-            lookDirection = getClosestPoint() - transform.position;
-            lookDirection.y = 0;
         }
 
         yield return null;

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerLifecycleService : MonoBehaviour
@@ -7,6 +8,9 @@ public class PlayerLifecycleService : MonoBehaviour
 
     [SerializeField]
     private PlayerController playerPrefab;
+
+    [SerializeField]
+    private float respawnDelay = 2f;
 
     private PlayerController _playerController;
 
@@ -25,6 +29,12 @@ public class PlayerLifecycleService : MonoBehaviour
 
     private void OnPlayerDied()
     {
+        StartCoroutine(RespavnPlayerRoutine());
+    }
+
+    private IEnumerator RespavnPlayerRoutine()
+    {
+        yield return new WaitForSeconds(respawnDelay);
         SpawnPlayer();
     }
 }

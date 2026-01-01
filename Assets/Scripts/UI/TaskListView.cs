@@ -27,7 +27,7 @@ public class TaskListView : MonoBehaviour
     {
         if (taskRecords.ContainsKey(taskKey))
         {
-            Destroy(taskRecords[taskKey]);
+            Destroy(taskRecords[taskKey].gameObject);
             taskRecords.Remove(taskKey);
         }
     }

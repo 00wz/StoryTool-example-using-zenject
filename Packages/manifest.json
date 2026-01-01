@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.00wz.storytool": "file:D:/Projects/StoryTool/Assets/StoryTool",
+    "com.00wz.storytool": "file:D:/UnityProj/StoryTool/Assets/StoryTool",
     "com.unity.ai.navigation": "2.0.8",
     "com.unity.collab-proxy": "2.11.2",
     "com.unity.ide.rider": "3.0.36",
