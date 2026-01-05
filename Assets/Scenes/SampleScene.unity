@@ -1710,6 +1710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 889807631}
   playerPrefab: {fileID: 5139658580033564669, guid: ee468ba82b8a43842ba7762411952c76, type: 3}
+  respawnDelay: 2
 --- !u!1 &85027657
 GameObject:
   m_ObjectHideFlags: 0
@@ -25361,15 +25362,60 @@ MonoBehaviour:
     - rid: 3781012160386695325
     - rid: 3781012160386695329
     - rid: 3781012160386695331
+    comments:
+    - rid: 2709725645224804413
+    - rid: 2709725645224804414
+    - rid: 2709725645224804415
+    - rid: 2709725645224804416
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 2709725645224804413
+      type: {class: StoryGraphComment, ns: StoryTool.Runtime, asm: StoryTool.Runtime}
+      data:
+        _editorRect:
+          serializedVersion: 2
+          x: 1268.8
+          y: 71.2
+          width: 1643.2
+          height: 224.00002
+        _title: 'Quest: Crystals of Stabilization'
+    - rid: 2709725645224804414
+      type: {class: StoryGraphComment, ns: StoryTool.Runtime, asm: StoryTool.Runtime}
+      data:
+        _editorRect:
+          serializedVersion: 2
+          x: 3324.8
+          y: 76
+          width: 2180.8
+          height: 225.6
+        _title: 'Quest: Cursed Sentinels'
+    - rid: 2709725645224804415
+      type: {class: StoryGraphComment, ns: StoryTool.Runtime, asm: StoryTool.Runtime}
+      data:
+        _editorRect:
+          serializedVersion: 2
+          x: 1262.4
+          y: 360.8
+          width: 1667.9999
+          height: 217.60004
+        _title: 'Quest: Bartol''s Firewood'
+    - rid: 2709725645224804416
+      type: {class: StoryGraphComment, ns: StoryTool.Runtime, asm: StoryTool.Runtime}
+      data:
+        _editorRect:
+          serializedVersion: 2
+          x: 1276
+          y: 690.4
+          width: 2864
+          height: 243.19995
+        _title: 'Quest: The Ancient Relic'
     - rid: 3781012133601345725
       type: {class: StartStoryTask, ns: StoryTool.BuiltInTasks, asm: StoryTool.BuiltInTasks}
       data:
-        _editorNodePosition: {x: 259, y: 278}
+        _editorNodePosition: {x: 190.4, y: 392}
         _activityFlag_editor: 0
         start:
           _nextTriggerLink:
@@ -25395,7 +25441,7 @@ MonoBehaviour:
     - rid: 3781012160386695263
       type: {class: PlaySound, ns: , asm: Assembly-CSharp}
       data:
-        _editorNodePosition: {x: 384, y: 244}
+        _editorNodePosition: {x: 315.2, y: 357.6}
         _activityFlag_editor: 0
         start:
           _triggerlink:
@@ -25410,7 +25456,7 @@ MonoBehaviour:
     - rid: 3781012160386695265
       type: {class: ShowMessage, ns: , asm: Assembly-CSharp}
       data:
-        _editorNodePosition: {x: 656, y: 244}
+        _editorNodePosition: {x: 587.2, y: 357.6}
         _activityFlag_editor: 0
         start:
           _triggerlink:
@@ -25427,7 +25473,7 @@ MonoBehaviour:
     - rid: 3781012160386695267
       type: {class: BranchStoryTask, ns: StoryTool.BuiltInTasks, asm: StoryTool.BuiltInTasks}
       data:
-        _editorNodePosition: {x: 1000, y: 244}
+        _editorNodePosition: {x: 931.2, y: 357.6}
         _activityFlag_editor: 0
         input:
           _triggerlink:
