@@ -1,12 +1,13 @@
 {
   "dependencies": {
     "com.00wz.storytool": {
-      "version": "file:D:/UnityProj/StoryTool/Assets/StoryTool",
+      "version": "https://github.com/00wz/StoryTool.git",
       "depth": 0,
-      "source": "local",
+      "source": "git",
       "dependencies": {
         "com.unity.nuget.mono-cecil": "1.10.2"
-      }
+      },
+      "hash": "a0f84b15bbc5bca6302888843442b237299541f7"
     },
     "com.unity.ai.navigation": {
       "version": "2.0.8",
